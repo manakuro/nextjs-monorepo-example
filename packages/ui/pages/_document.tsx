@@ -5,7 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document'
-const sharePatch = require('@module-federation/nextjs-mf/patchSharing')
+import { patchSharing } from '@module-federation/nextjs-mf'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -16,9 +16,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        {sharePatch()}
-        <noscript id="__next_css__DO_NOT_USE__"></noscript>
-        <script src="http://localhost:3001/_next/static/remoteEntryMerged.js" />
+        {patchSharing()}
         <Head />
         <body>
           <Main />

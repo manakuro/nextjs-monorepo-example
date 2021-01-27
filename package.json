@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "preinstall": "typesync || :",
-    "dev": "concurrently \"wsrun --parallel dev\""
+    "dev": "wsrun dev"
   },
   "devDependencies": {
     "@types/concurrently": "^5.2.1",
@@ -38,5 +38,8 @@
   "resolutions": {
     "webpack": "5.11.1",
     "next": "10.0.5"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
   }
 }
