@@ -112,6 +112,7 @@
 
 .logo {
   height: 1em;
+  margin-left: 2px;
 }
 
 @media (max-width: 600px) {
